@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url(/IMG/Novo\ Projeto.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+
+/* Navegação */
+header {
+    padding: 2rem 5%;
+    background: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e50914; /* Vermelho estilo cinema */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1492691523567-30730044df6b') no-repeat center/cover;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    text-indent: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1492691523567-30730044df6b') no-repeat center/cover;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 12px 30px;
+    background: #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Portfolio Grid */
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 5%;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.thumb {
+    width: 100%;
+    height: 200px;
+    background: #333;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid #000000;
+    color: #000000;
+}

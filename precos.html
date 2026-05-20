@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preços — AUDIOFLIX</title>
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <style>
+    .planos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .plano {
+      background: var(--preto-claro);
+      border: 1px solid rgba(201,168,76,0.15);
+      padding: 2.8rem 2.5rem;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+    }
+    .plano:hover {
+      border-color: rgba(201,168,76,0.35);
+      transform: translateY(-6px);
+    }
+    .plano.destaque {
+      border-color: var(--vermelho);
+      background: linear-gradient(160deg, rgba(201,168,76,0.06) 0%, var(--preto-claro) 100%);
+    }
+    .plano-badge {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--vermelho);
+      color: var(--preto);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+    }
+    .plano-titulo {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--vermelho);
+      margin-bottom: 1rem;
+    }
+    .plano h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--branco);
+      margin-bottom: 1.5rem;
+    }
+    .plano-preco {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+    }
+    .plano-preco .valor {
+      font-family: var(--fonte-titulo);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--vermelho);
+      line-height: 1;
+    }
+    .plano-preco .moeda {
+      font-size: 1.2rem;
+      vertical-align: top;
+      line-height: 2.2;
+      margin-right: 0.2rem;
+    }
+    .plano-preco .obs {
+      font-size: 0.72rem;
+      color: var(--cinza);
+      margin-top: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+    .plano-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-bottom: 2.5rem;
+    }
+    .plano-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-size: 0.85rem;
+      color: var(--cinza);
+    }
+    .plano-item .check {
+      color: var(--vermelho);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .plano-item.inativo { opacity: 0.35; }
+    .plano-item.inativo .check { color: var(--cinza-escuro); }
+    .extras {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .extra-card {
+      background: var(--preto-claro);
+      border: 1px solid rgba(201,168,76,0.12);
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .extra-card .extra-nome {
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--branco);
+      margin-bottom: 0.3rem;
+    }
+    .extra-card .extra-desc {
+      font-size: 0.8rem;
+      color: var(--cinza);
+    }
+    .extra-card .extra-preco {
+      font-family: var(--fonte-titulo);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--vermelho);
+      white-space: nowrap;
+      margin-left: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .planos { grid-template-columns: 1fr; }
+      .extras { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Audio<span>flix</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="equipe.html">Equipe</a></li>
+      <li><a href="processo.html">Processo</a></li>
+      <li><a href="precos.html" class="ativo">Preços</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="page-banner">
+    <img class="hero-img" src="img/banner-precos.jpg" alt="Preços AUDIOFLIX" />
+    <div class="hero-overlay"></div>
+    <div class="page-banner-content">
+      <p class="breadcrumb">Início · Preços</p>
+      <h1>Planos & <em style="font-style:italic; color: var(--vermelho);">preços</em></h1>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Pacotes de Fotografia</span>
+        <h2>Escolha o plano <em>ideal</em></h2>
+        <div class="divisor"></div>
+        <p>Todos os pacotes incluem edição profissional e galeria digital de entrega. Pagamento em até 12x no cartão.</p>
+      </div>
+      <div class="planos">
+        <div class="plano">
+          <p class="plano-titulo">Essencial</p>
+          <h3>Retrato Simples</h3>
+          <div class="plano-preco">
+            <div class="valor"><span class="moeda">R$</span>490</div>
+            <p class="obs">sessão única · estúdio</p>
+          </div>
+          <ul class="plano-items">
+            <li class="plano-item"><span class="check">✦</span> Sessão de 1 hora</li>
+            <li class="plano-item"><span class="check">✦</span> 15 fotos editadas</li>
+            <li class="plano-item"><span class="check">✦</span> Galeria digital 30 dias</li>
+            <li class="plano-item"><span class="check">✦</span> 1 roupa / 1 cenário</li>
+            <li class="plano-item inativo"><span class="check">✦</span> Locação externa</li>
+            <li class="plano-item inativo"><span class="check">✦</span> Álbum impresso</li>
+          </ul>
+          <a href="contato.html" class="btn" style="width:100%; text-align:center; display:block;">Contratar</a>
+        </div>
+        <div class="plano destaque">
+          <span class="plano-badge">Mais popular</span>
+          <p class="plano-titulo">Premium</p>
+          <h3>Ensaio Completo</h3>
+          <div class="plano-preco">
+            <div class="valor"><span class="moeda">R$</span>980</div>
+            <p class="obs">sessão extendida · estúdio ou locação</p>
+          </div>
+          <ul class="plano-items">
+            <li class="plano-item"><span class="check">✦</span> Sessão de 2–3 horas</li>
+            <li class="plano-item"><span class="check">✦</span> 30 fotos editadas</li>
+            <li class="plano-item"><span class="check">✦</span> Galeria digital 90 dias</li>
+            <li class="plano-item"><span class="check">✦</span> Até 3 roupas / 2 cenários</li>
+            <li class="plano-item"><span class="check">✦</span> Locação externa inclusa</li>
+            <li class="plano-item inativo"><span class="check">✦</span> Álbum impresso</li>
+          </ul>
+          <a href="contato.html" class="btn btn-solid" style="width:100%; text-align:center; display:block;">Contratar</a>
+        </div>
+        <div class="plano">
+          <p class="plano-titulo">Luxo</p>
+          <h3>Experiência Gold</h3>
+          <div class="plano-preco">
+            <div class="valor"><span class="moeda">R$</span>1.890</div>
+            <p class="obs">dia completo · múltiplas locações</p>
+          </div>
+          <ul class="plano-items">
+            <li class="plano-item"><span class="check">✦</span> Sessão de dia inteiro</li>
+            <li class="plano-item"><span class="check">✦</span> 60 fotos editadas</li>
+            <li class="plano-item"><span class="check">✦</span> Galeria digital permanente</li>
+            <li class="plano-item"><span class="check">✦</span> Figurinos ilimitados</li>
+            <li class="plano-item"><span class="check">✦</span> Múltiplas locações</li>
+            <li class="plano-item"><span class="check">✦</span> Álbum impresso 30x30 cm</li>
+          </ul>
+          <a href="contato.html" class="btn" style="width:100%; text-align:center; display:block;">Contratar</a>
+        </div>
+      </div>
+      <div style="margin-top: 5rem;">
+        <div class="section-header">
+          <span class="section-label">Serviços Adicionais</span>
+          <h2>Personalize sua <em>experiência</em></h2>
+          <div class="divisor"></div>
+        </div>
+        <div class="extras">
+          <div class="extra-card">
+            <div>
+              <p class="extra-nome">Álbum Impresso 20×20 cm</p>
+              <p class="extra-desc">Capa dura, papel fotográfico premium, 20 páginas</p>
+            </div>
+            <span class="extra-preco">+ R$ 390</span>
+          </div>
+          <div class="extra-card">
+            <div>
+              <p class="extra-nome">Cobertura de Evento</p>
+              <p class="extra-desc">Até 4 horas · iluminação profissional inclusa</p>
+            </div>
+            <span class="extra-preco">+ R$ 1.200</span>
+          </div>
+          <div class="extra-card">
+            <div>
+              <p class="extra-nome">Edição de Vídeo</p>
+              <p class="extra-desc">Até 3 minutos · trilha sonora licenciada</p>
+            </div>
+            <span class="extra-preco">+ R$ 750</span>
+          </div>
+          <div class="extra-card">
+            <div>
+              <p class="extra-nome">Fotos extras</p>
+              <p class="extra-desc">Cada foto além do pacote contratado</p>
+            </div>
+            <span class="extra-preco">+ R$ 35</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background: var(--preto-claro); border-top: 1px solid rgba(201,168,76,0.1); text-align:center;">
+    <div class="container">
+      <span class="section-label">Dúvidas?</span>
+      <h2 style="font-family: var(--fonte-titulo); font-size: clamp(1.8rem,4vw,3rem); font-weight:300; margin: 0.8rem 0 1.5rem;">
+        Fale com a gente e <em style="color: var(--vermelho);">monte seu pacote</em>
+      </h2>
+      <a href="contato.html" class="btn btn-solid">Entrar em Contato</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">Audioflix</div>
+    <p class="footer-tagline">Estúdio Audiovisual · Fotografia de Arte</p>
+    <p class="footer-copy">&copy; 2025 AUDIOFLIX. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

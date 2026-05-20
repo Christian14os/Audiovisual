@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processo — AUDIOFLIX</title>
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <style>
+    .etapa {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 2.5rem;
+      align-items: flex-start;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .etapa:last-child { border-bottom: none; }
+    .etapa-num {
+      font-family: var(--fonte-titulo);
+      font-size: 4.5rem;
+      font-weight: 300;
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      text-align: right;
+      padding-right: 2rem;
+      border-right: 1px solid rgba(201, 76, 76, 0.2);
+    }
+    .etapa-info h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--branco);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+    .etapa-info .subtitulo {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--vermelho);
+      margin-bottom: 1rem;
+    }
+    .etapa-info p {
+      color: var(--cinza);
+      font-size: 0.92rem;
+      line-height: 1.9;
+    }
+    .etapa-detalhe {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .etapa-detalhe span {
+      padding: 0.3rem 0.8rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(134, 130, 130, 0.11);
+      border: 1px solid rgba(201,168,76,0.35);
+      color: var(--vermelho);
+    }
+    .timeline-linha {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+    .timeline-passo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      min-width: 80px;
+    }
+    .timeline-passo .circulo {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--vermelho);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--vermelho);
+      background: var(--preto);
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-passo .label {
+      margin-top: 0.6rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cinza);
+      text-align: center;
+    }
+    .timeline-passo .linha-h {
+      position: absolute;
+      top: 20px;
+      right: -50%;
+      width: 100%;
+      height: 1px;
+      background: rgba(201,168,76,0.35);
+    }
+    @media (max-width: 640px) {
+      .etapa { grid-template-columns: 60px 1fr; gap: 1.2rem; }
+      .etapa-num { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Audio<span>flix</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="equipe.html">Equipe</a></li>
+      <li><a href="processo.html" class="ativo">Processo</a></li>
+      <li><a href="precos.html">Preços</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="page-banner">
+    <img class="hero-img" src="img/banner-processo.jpg" alt="Processo AUDIOFLIX" />
+    <div class="hero-overlay"></div>
+    <div class="page-banner-content">
+      <p class="breadcrumb">Início · Processo</p>
+      <h1>Como <em style="font-style:italic; color: var(--vermelho);">trabalhamos</em></h1>
+    </div>
+  </div>
+  <section style="background: var(--preto-medio); text-align:center;">
+    <div class="container" style="max-width: 640px;">
+      <span class="section-label">Do conceito à entrega</span>
+      <h2 style="font-family: var(--fonte-titulo); font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight:300; line-height:1.15; margin: 0.6rem 0 1rem;">
+        Um processo criado<br><em style="color: var(--vermelho);">para você.</em>
+      </h2>
+      <div class="divisor"></div>
+      <p style="color: var(--cinza); font-size: 0.92rem; margin-top:1.2rem; line-height:1.9;">
+        Trabalhamos com total transparência e cuidado em cada etapa. Do primeiro contato à entrega final, você sabe exatamente o que esperar — e pode se surpreender para melhor.
+      </p>
+    </div>
+  </section>
+  <section>
+    <div class="container" style="max-width: 860px;">
+      <div class="etapa">
+        <div class="etapa-num">01</div>
+        <div class="etapa-info">
+          <p class="subtitulo">Primeiro Contato</p>
+          <h3>Briefing & Alinhamento</h3>
+          <p>Tudo começa com uma conversa. Entendemos seus objetivos, expectativas, o estilo que você ama e o contexto do projeto. Aqui definimos o tom de todo o trabalho.</p>
+          <div class="etapa-detalhe">
+            <span>Reunião online ou presencial</span>
+            <span>Formulário de briefing</span>
+            <span>Gratuito</span>
+          </div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">02</div>
+        <div class="etapa-info">
+          <p class="subtitulo">Planejamento</p>
+          <h3>Conceito & Produção</h3>
+          <p>Com o briefing aprovado, desenvolvemos o conceito visual, selecionamos locações, cuidamos do figurino, cenografia e iluminação. Cada detalhe é pensado antes de apertar o obturador.</p>
+          <div class="etapa-detalhe">
+            <span>Moodboard</span>
+            <span>Scouting de locação</span>
+            <span>Cronograma da sessão</span>
+          </div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">03</div>
+        <div class="etapa-info">
+          <p class="subtitulo">A Sessão</p>
+          <h3>Captação & Direção</h3>
+          <p>No dia da sessão, criamos um ambiente de confiança e criatividade. Nossa direção de cena garante que o resultado seja natural, expressivo e exatamente o que foi planejado — às vezes, mais do que se esperava.</p>
+          <div class="etapa-detalhe">
+            <span>Estúdio ou locação externa</span>
+            <span>Iluminação profissional</span>
+            <span>Direção de pose</span>
+          </div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">04</div>
+        <div class="etapa-info">
+          <p class="subtitulo">Pós-produção</p>
+          <h3>Edição & Tratamento</h3>
+          <p>Selecionamos as melhores imagens e aplicamos nossa edição exclusiva — equilibrando luz, cor, textura e detalhe para criar um resultado sofisticado e atemporal. Nenhuma foto sai sem ser tratada com cuidado.</p>
+          <div class="etapa-detalhe">
+            <span>Correção de cor</span>
+            <span>Retoque profissional</span>
+            <span>Identidade de edição própria</span>
+          </div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">05</div>
+        <div class="etapa-info">
+          <p class="subtitulo">Entrega</p>
+          <h3>Galeria Digital & Revisão</h3>
+          <p>Entregamos as imagens em galeria digital privada, com opção de download em alta resolução. Você pode solicitar ajustes pontuais e, ao aprovar, disponibilizamos o acesso completo.</p>
+          <div class="etapa-detalhe">
+            <span>Galeria online privada</span>
+            <span>Alta resolução</span>
+            <span>Prazo de 10–15 dias úteis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background: var(--preto-claro); border-top: 1px solid rgba(201,168,76,0.1); text-align:center;">
+    <div class="container">
+      <span class="section-label">Próximo passo</span>
+      <h2 style="font-family: var(--fonte-titulo); font-size: clamp(1.8rem,4vw,3rem); font-weight:300; margin: 0.8rem 0 1.5rem;">
+        Veja nossos <em style="color: var(--vermelho);">planos</em> e preços
+      </h2>
+      <a href="precos.html" class="btn btn-solid">Ver Preços</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">Audioflix</div>
+    <p class="footer-tagline">Estúdio Audiovisual · Fotografia de Arte</p>
+    <p class="footer-copy">&copy; 2025 AUDIOFLIX. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

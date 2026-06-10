@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato — AUDIOFLIX</title>
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <style>
+    .contato-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contato-info h2 {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .contato-info p {
+      color: var(--cinza);
+      font-size: 0.92rem;
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+    .info-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .info-item .icon {
+      color: var(--vermelho);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .info-item .detalhe strong {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--vermelho);
+      margin-bottom: 0.2rem;
+    }
+    .info-item .detalhe span {
+      font-size: 0.9rem;
+      color: var(--cinza);
+    }
+    .form-grupo {
+      margin-bottom: 1.5rem;
+    }
+    .form-grupo label {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--vermelho);
+      margin-bottom: 0.5rem;
+    }
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea {
+      width: 100%;
+      background: var(--preto-claro);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--branco);
+      font-family: var(--fonte-corpo);
+      font-size: 0.88rem;
+      padding: 0.85rem 1.1rem;
+      outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+    }
+    .form-grupo input:focus,
+    .form-grupo select:focus,
+    .form-grupo textarea:focus {
+      border-color: var(--vermelho);
+    }
+    .form-grupo input::placeholder,
+    .form-grupo textarea::placeholder {
+      color: var(--cinza-escuro);
+    }
+    .form-grupo select option {
+      background: var(--preto-claro);
+      color: var(--branco);
+    }
+    .form-grupo textarea { resize: vertical; min-height: 130px; }
+    .form-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    .mapa-placeholder {
+      width: 100%;
+      height: 260px;
+      background: var(--preto-claro);
+      border: 1px solid rgba(201,168,76,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: var(--cinza);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 2.5rem;
+    }
+    .mapa-placeholder .pin { font-size: 2rem; color: var(--vermelho); margin-bottom: 0.3rem; }
+    @media (max-width: 900px) {
+      .contato-wrapper { grid-template-columns: 1fr; gap: 3rem; }
+      .form-2col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Audio<span>flix</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="equipe.html">Equipe</a></li>
+      <li><a href="processo.html">Processo</a></li>
+      <li><a href="precos.html">Preços</a></li>
+      <li><a href="contato.html" class="ativo">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="page-banner">
+    <img class="hero-img" src="img/banner-contato.jpg" alt="Contato AUDIOFLIX" />
+    <div class="hero-overlay"></div>
+    <div class="page-banner-content">
+      <p class="breadcrumb">Início · Contato</p>
+      <h1>Fale <em style="font-style:italic; color: var(--vermelho);">conosco</em></h1>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="contato-wrapper">
+        <div class="contato-info">
+          <span class="section-label">Entre em Contato</span>
+          <h2>Vamos criar algo <em style="color: var(--vermelho);">juntos.</em></h2>
+          <span class="linha-dourada"></span>
+          <p style="margin-top: 1.2rem;">
+            Seja para marcar uma sessão, tirar dúvidas sobre nossos serviços ou apenas uma conversa sobre fotografia — estamos aqui. Respondemos em até 24 horas úteis.
+          </p>
+          <div class="info-item">
+            <span class="icon">◉</span>
+            <div class="detalhe">
+              <strong>Endereço</strong>
+              <span>Rua Nove Nove, 999<br>São Bento do Sul - SC</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">◈</span>
+            <div class="detalhe">
+              <strong>Telefone & WhatsApp</strong>
+              <span>(47) 99999-9999</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">✦</span>
+            <div class="detalhe">
+              <strong>E-mail</strong>
+              <span>contato@audioflix.com.br</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">◐</span>
+            <div class="detalhe">
+              <strong>Horário de Atendimento</strong>
+              <span>Segunda a Sexta — 9h às 18h<br>Sábados — 10h às 14h</span>
+            </div>
+          </div>
+          <div class="mapa-placeholder">
+            <span class="pin">◉</span>
+            <span>São Bento do Sul · SC</span>
+            <span style="color: var(--vermelho); font-size:0.65rem;">Rua Nove Nove, 999</span>
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Envie uma Mensagem</span>
+          <h2 style="font-family: var(--fonte-titulo); font-size: clamp(1.6rem,3vw,2.4rem); font-weight:300; margin-bottom:2rem;">
+            Agende sua <em style="color: var(--vermelho);">sessão</em>
+          </h2>
+          <form action="#" method="POST">
+            <div class="form-2col">
+              <div class="form-grupo">
+                <label for="nome">Seu Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome completo" />
+              </div>
+              <div class="form-grupo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" />
+              </div>
+            </div>
+            <div class="form-grupo">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 9 9999-9999" />
+            </div>
+            <div class="form-grupo">
+              <label for="servico">Serviço de Interesse</label>
+              <select id="servico" name="servico">
+                <option value="" disabled selected>Selecione um serviço...</option>
+                <option value="retrato">Fotografia de Retrato</option>
+                <option value="casamento">Casamento / Evento</option>
+                <option value="comercial">Fotografia Comercial</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-grupo">
+              <label for="data">Data Desejada (opcional)</label>
+              <input type="date" id="data" name="data" />
+            </div>
+            <div class="form-grupo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o que você está procurando..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid" style="width:100%; cursor:pointer; font-family: var(--fonte-corpo);">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">Audioflix</div>
+    <p class="footer-tagline">Estúdio Audiovisual · Fotografia de Arte</p>
+    <p class="footer-copy">&copy; 2025 AUDIOFLIX. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

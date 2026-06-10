@@ -49,36 +49,13 @@
       letter-spacing: 0.06em;
     }
     .portfolio-overlay small {
-      font-size: 0.65rem;
+      font-size: 0.90rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--vermelho);
       margin-top: 0.4rem;
     }
     .portfolio-item.tall { grid-row: span 2; aspect-ratio: auto; }
-    .filtros {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-    .filtro-btn {
-      padding: 0.5rem 1.5rem;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      border: 1px solid rgba(201,168,76,0.35);
-      color: var(--cinza);
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .filtro-btn:hover,
-    .filtro-btn.ativo {
-      border-color: var(--vermelho);
-      color: var(--vermelho);
-    }
     @media (max-width: 900px) {
       .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
       .portfolio-item.tall { grid-row: span 1; aspect-ratio: 4/3; }
@@ -118,20 +95,13 @@
         <div class="divisor"></div>
         <p>Cada imagem representa uma história real, contada com precisão e arte.</p>
       </div>
-      <div class="filtros">
-        <button class="filtro-btn ativo">Todos</button>
-        <button class="filtro-btn">Retratos</button>
-        <button class="filtro-btn">Casamentos</button>
-        <button class="filtro-btn">Comercial</button>
-        <button class="filtro-btn">Esportes</button>
-      </div>
       <div class="portfolio-grid">
         <div class="portfolio-item tall" style="min-height: 500px;">
           <img src="./IMG/portfolio-01.jpg" alt="Retrato Artístico" />
           <div class="portfolio-overlay">
             <span></span>
             <p>Retrato Artístico</p>
-            <small>Estúdio</small>
+            <small><strong>Estúdio</strong></small>
           </div>
         </div>
         <div class="portfolio-item">
@@ -139,7 +109,7 @@
           <div class="portfolio-overlay">
             <span></span>
             <p>Cerimônia Clara & João</p>
-            <small>Casamento</small>
+            <small><strong>Casamento</strong></small>
           </div>
         </div>
         <div class="portfolio-item">
@@ -147,15 +117,15 @@
           <div class="portfolio-overlay">
             <span></span>
             <p>Retrato em Família</p>
-            <small>Família Munis</small>
+            <small><strong>Família Munis</strong></small>
           </div>
         </div>
         <div class="portfolio-item">
           <img src="./IMG/portfolio-04.jpeg" alt="Eventos" />
           <div class="portfolio-overlay">
             <span></span>
-            <p>game the potato</p>
-            <small>Esportes</small>
+            <p>Eventos</p>
+            <small><strong>Esportes</strong></small>
           </div>
         </div>
         <div class="portfolio-item">
@@ -163,7 +133,7 @@
           <div class="portfolio-overlay">
             <span></span>
             <p>Retrato Executivo</p>
-            <small>Corporativo</small>
+            <small><strong>Corporativo</strong></small>
           </div>
         </div>
         <div class="portfolio-item tall" style="min-height: 500px;">
@@ -171,7 +141,7 @@
           <div class="portfolio-overlay">
             <span></span>
             <p>Ensaio Editorial</p>
-            <small>EDITORIAL VOGUE</small>
+            <small><strong>Editorial Vogue</strong></small>
           </div>
         </div>
         <div class="portfolio-item">
@@ -179,7 +149,7 @@
           <div class="portfolio-overlay">
             <span></span>
             <p>Esportes</p>
-            <small>the best moments</small>
+            <small><strong>the best moments</strong></small>
           </div>
         </div>
         <div class="portfolio-item">
@@ -187,7 +157,7 @@
           <div class="portfolio-overlay">
             <span></span>
             <p>Ensaio Feminino</p>
-            <small>Retrato</small>
+            <small><strong>Retrato</strong></small>
           </div>
         </div>
       </div>
